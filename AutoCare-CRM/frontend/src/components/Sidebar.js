@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import { useAuth } from '../context/AuthContext';
 import {
   FaHome,
   FaUsers,
@@ -14,6 +15,8 @@ import {
 } from 'react-icons/fa';
 
 const Sidebar = ({ darkMode }) => {
+  const { user, logout } = useAuth();
+  
   const menuItems = [
     { title: 'Dashboard', icon: <FaHome />, path: '/' },
     { title: 'Customers', icon: <FaUsers />, path: '/customers' },
@@ -26,9 +29,13 @@ const Sidebar = ({ darkMode }) => {
     { title: 'Settings', icon: <FaCog />, path: '/settings' },
   ];
 
+  const handleLogout = () => {
+    logout();
+  };
+
   return (
     <div className={`w-56 h-screen fixed overflow-y-auto transition-all duration-300 ease-in-out ${darkMode ? 'bg-gray-800' : 'bg-gray-900'}`}>
-      <div className="flex items-center justify-center py-6 border-b border-gray-700">
+      <div className="flex flex-col items-center justify-center py-6 border-b border-gray-700">
         <div className="bg-gradient-to-br from-blue-500 to-indigo-600 p-3 rounded-full hover:scale-105 transition-transform duration-300 border-2 border-white/20">
           <img
             src={process.env.PUBLIC_URL + '/logo.png'}
@@ -68,7 +75,10 @@ const Sidebar = ({ darkMode }) => {
           ))}
           <li className="mt-6 px-3 py-2">
             <div className="border-t border-gray-700 pt-4">
-              <button className="flex w-full items-center px-3 py-2.5 text-sm font-medium text-gray-300 rounded-lg hover:bg-gray-700 hover:text-white transition-colors">
+              <button
+                onClick={handleLogout}
+                className="flex w-full items-center px-3 py-2.5 text-sm font-medium text-gray-300 rounded-lg hover:bg-gray-700 hover:text-white transition-colors"
+              >
                 <span className="w-5 h-5 mr-3 flex items-center justify-center"><FaSignOutAlt /></span>
                 <span>Logout</span>
               </button>
