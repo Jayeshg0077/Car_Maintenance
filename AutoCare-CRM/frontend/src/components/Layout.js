@@ -35,11 +35,9 @@ const Layout = ({ children }) => {
               </button>
               <div className="relative">
                 <div className="flex items-center">
-                  <img
-                    className="h-8 w-8 rounded-full object-cover border-2 border-gray-200 dark:border-gray-700"
-                    src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                    alt="User avatar"
-                  />
+                  <div className="h-8 w-8 rounded-full bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center border-2 border-gray-200 dark:border-gray-700">
+                    <span className="text-white text-sm font-bold">AU</span>
+                  </div>
                   <span className="ml-2 text-sm font-medium text-gray-700 dark:text-gray-200">Admin User</span>
                 </div>
               </div>
