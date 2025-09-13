@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Car_Maintenance/static/css/main.3173978c.css",
-    "main.js": "/Car_Maintenance/static/js/main.93b7fc3a.js",
-    "static/js/453.6250b7f3.chunk.js": "/Car_Maintenance/static/js/453.6250b7f3.chunk.js",
-    "index.html": "/Car_Maintenance/index.html",
-    "main.3173978c.css.map": "/Car_Maintenance/static/css/main.3173978c.css.map",
-    "main.93b7fc3a.js.map": "/Car_Maintenance/static/js/main.93b7fc3a.js.map",
-    "453.6250b7f3.chunk.js.map": "/Car_Maintenance/static/js/453.6250b7f3.chunk.js.map"
+    "main.css": "/Car_Maintenance/AutoCare-CRM/frontend/build/static/css/main.3173978c.css",
+    "main.js": "/Car_Maintenance/AutoCare-CRM/frontend/build/static/js/main.cc7c90a7.js",
+    "static/js/453.6250b7f3.chunk.js": "/Car_Maintenance/AutoCare-CRM/frontend/build/static/js/453.6250b7f3.chunk.js",
+    "index.html": "/Car_Maintenance/AutoCare-CRM/frontend/build/index.html",
+    "main.3173978c.css.map": "/Car_Maintenance/AutoCare-CRM/frontend/build/static/css/main.3173978c.css.map",
+    "main.cc7c90a7.js.map": "/Car_Maintenance/AutoCare-CRM/frontend/build/static/js/main.cc7c90a7.js.map",
+    "453.6250b7f3.chunk.js.map": "/Car_Maintenance/AutoCare-CRM/frontend/build/static/js/453.6250b7f3.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.3173978c.css",
-    "static/js/main.93b7fc3a.js"
+    "static/js/main.cc7c90a7.js"
   ]
 }
