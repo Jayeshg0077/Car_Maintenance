@@ -80,7 +80,7 @@ const Staff = () => {
   const formatPhoneNumber = (phone) => {
     const cleaned = phone.replace(/\D/g, '');
     if (cleaned.length === 10) {
-      return `(${cleaned.slice(0,3)}) ${cleaned.slice(3,6)}-${cleaned.slice(6)}`;
+      return `(${cleaned.slice(0, 3)}) ${cleaned.slice(3, 6)}-${cleaned.slice(6)}`;
     }
     return phone;
   };
@@ -133,9 +133,9 @@ const Staff = () => {
     try {
       const required = ['name', 'role', 'email', 'phone'];
       const missing = required.filter(field => !formData[field]?.trim());
-      
+
       if (missing.length > 0) {
-        setError(`Please fill in all required fields: ${missing.map(field => 
+        setError(`Please fill in all required fields: ${missing.map(field =>
           field.charAt(0).toUpperCase() + field.slice(1)).join(', ')}`);
         return false;
       }
@@ -206,7 +206,7 @@ const Staff = () => {
 
       if (selectedStaff) {
         // Update existing staff member
-        setStaffMembers(prev => 
+        setStaffMembers(prev =>
           prev.map(staff => staff.id === selectedStaff.id ? staffData : staff)
         );
       } else {
@@ -218,7 +218,7 @@ const Staff = () => {
       const updatedStaff = selectedStaff
         ? staffMembers.map(staff => staff.id === selectedStaff.id ? staffData : staff)
         : [...staffMembers, staffData];
-      
+
       localStorage.setItem('staffMembers', JSON.stringify(updatedStaff));
 
       resetForm();
@@ -349,11 +349,10 @@ const Staff = () => {
                   <h3 className="text-lg font-semibold text-gray-900 dark:text-white">{staff.name}</h3>
                   <div className="flex items-center space-x-2">
                     <p className="text-sm text-gray-500 dark:text-gray-400">{staff.role}</p>
-                    <span className={`px-2 py-0.5 text-xs rounded-full ${
-                      staff.status === 'active'
+                    <span className={`px-2 py-0.5 text-xs rounded-full ${staff.status === 'active'
                         ? 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200'
                         : 'bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-200'
-                    }`}>
+                      }`}>
                       {staff.status.charAt(0).toUpperCase() + staff.status.slice(1)}
                     </span>
                   </div>
@@ -377,7 +376,7 @@ const Staff = () => {
                 </button>
               </div>
             </div>
-            
+
             <div className="space-y-3">
               <div className="flex items-center text-sm">
                 <FaEnvelope className="text-gray-400 mr-2" />

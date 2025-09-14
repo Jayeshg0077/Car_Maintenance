@@ -14,9 +14,9 @@ import {
   FaSignOutAlt
 } from 'react-icons/fa';
 
-const Sidebar = ({ darkMode }) => {
-  const { user, logout } = useAuth();
-  
+const Sidebar = () => {
+  const { logout } = useAuth();
+
   const menuItems = [
     { title: 'Dashboard', icon: <FaHome />, path: '/' },
     { title: 'Customers', icon: <FaUsers />, path: '/customers' },
@@ -34,7 +34,7 @@ const Sidebar = ({ darkMode }) => {
   };
 
   return (
-    <div className={`w-56 h-screen fixed overflow-y-auto transition-all duration-300 ease-in-out ${darkMode ? 'bg-gray-800' : 'bg-gray-900'}`}>
+    <div className="w-56 h-screen fixed overflow-y-auto transition-all duration-300 ease-in-out bg-gray-900">
       <div className="flex flex-col items-center justify-center py-6 border-b border-gray-700">
         <div className="bg-gradient-to-br from-blue-500 to-indigo-600 p-3 rounded-full hover:scale-105 transition-transform duration-300 border-2 border-white/20">
           <img
@@ -50,7 +50,7 @@ const Sidebar = ({ darkMode }) => {
               console.log('Logo loaded successfully');
             }}
           />
-          <div className="h-16 w-16 flex items-center justify-center text-white font-bold text-xl" style={{display: 'none'}}>
+          <div className="h-16 w-16 flex items-center justify-center text-white font-bold text-xl" style={{ display: 'none' }}>
             AC
           </div>
         </div>
